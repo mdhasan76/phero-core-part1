@@ -1,0 +1,31 @@
+Fri Aug 25 2023 6:26:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.create()` invocation in
+D:\Next-Level-webDev\SQL\university-management-core-service-starter\src\app\modules\academicSemester\academicSemester.service.ts:8:48
+
+  5 const insertToDB = async (
+  6   academicSemesterData: AcademicSemester
+  7 ): Promise<AcademicSemester> => {
+→ 8   const result = await prisma.academicSemester.create({
+        data: {
+          year: 2025,
+          title: "Autumn",
+          codes: "Saturday",
+          startMonth: "January",
+          endMonth: "Februery",
+      +   code: String
+        }
+      })
+
+Argument `code` is missing.
+Fri Aug 25 2023 6:30:56 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "code"
+    ],
+    "message": "Required"
+  }
+]
