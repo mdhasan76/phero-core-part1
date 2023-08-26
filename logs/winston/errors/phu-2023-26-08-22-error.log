@@ -1,0 +1,108 @@
+Sat Aug 26 2023 22:3:49 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.findMany()` invocation in
+D:\Next-Level-webDev\SQL\university-management-core-service-starter\src\app\modules\academicSemester\academicSemester.service.ts:50:48
+
+  47 const whereCondition: Prisma.AcademicSemesterWhereInput = andCondition.length
+  48   ? { AND: andCondition }
+  49   : {};
+→ 50 const result = await prisma.academicSemester.findMany({
+       where: {},
+       skip: 0,
+       take: 10,
+       orderBy: {
+         undefined: "year",
+         ~~~~~~~~~
+     ?   id?: SortOrder,
+     ?   year?: SortOrder,
+     ?   title?: SortOrder,
+     ?   code?: SortOrder,
+     ?   startMonth?: SortOrder,
+     ?   endMonth?: SortOrder,
+     ?   createdAt?: SortOrder,
+     ?   updatedAt?: SortOrder,
+     ?   students?: StudentOrderByRelationAggregateInput
+       }
+     })
+
+Unknown argument `undefined`. Available options are listed in green.
+Sat Aug 26 2023 22:4:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.findMany()` invocation in
+D:\Next-Level-webDev\SQL\university-management-core-service-starter\src\app\modules\academicSemester\academicSemester.service.ts:50:48
+
+  47 const whereCondition: Prisma.AcademicSemesterWhereInput = andCondition.length
+  48   ? { AND: andCondition }
+  49   : {};
+→ 50 const result = await prisma.academicSemester.findMany({
+       where: {},
+       skip: 0,
+       take: 10,
+       orderBy: {
+         asc: "year",
+         ~~~
+     ?   id?: SortOrder,
+     ?   year?: SortOrder,
+     ?   title?: SortOrder,
+     ?   code?: SortOrder,
+     ?   startMonth?: SortOrder,
+     ?   endMonth?: SortOrder,
+     ?   createdAt?: SortOrder,
+     ?   updatedAt?: SortOrder,
+     ?   students?: StudentOrderByRelationAggregateInput
+       }
+     })
+
+Unknown argument `asc`. Did you mean `id`? Available options are listed in green.
+Sat Aug 26 2023 22:4:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.findMany()` invocation in
+D:\Next-Level-webDev\SQL\university-management-core-service-starter\src\app\modules\academicSemester\academicSemester.service.ts:50:48
+
+  47 const whereCondition: Prisma.AcademicSemesterWhereInput = andCondition.length
+  48   ? { AND: andCondition }
+  49   : {};
+→ 50 const result = await prisma.academicSemester.findMany({
+       where: {},
+       skip: 0,
+       take: 10,
+       orderBy: {
+         asc: "title",
+         ~~~
+     ?   id?: SortOrder,
+     ?   year?: SortOrder,
+     ?   title?: SortOrder,
+     ?   code?: SortOrder,
+     ?   startMonth?: SortOrder,
+     ?   endMonth?: SortOrder,
+     ?   createdAt?: SortOrder,
+     ?   updatedAt?: SortOrder,
+     ?   students?: StudentOrderByRelationAggregateInput
+       }
+     })
+
+Unknown argument `asc`. Did you mean `id`? Available options are listed in green.
+Sat Aug 26 2023 22:6:53 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicSemester.findMany()` invocation in
+D:\Next-Level-webDev\SQL\university-management-core-service-starter\src\app\modules\academicSemester\academicSemester.service.ts:50:48
+
+  47 const whereCondition: Prisma.AcademicSemesterWhereInput = andCondition.length
+  48   ? { AND: andCondition }
+  49   : {};
+→ 50 const result = await prisma.academicSemester.findMany({
+       where: {},
+       skip: 0,
+       take: 10,
+       orderBy: {
+         asc: "title",
+         ~~~
+     ?   id?: SortOrder,
+     ?   year?: SortOrder,
+     ?   title?: SortOrder,
+     ?   code?: SortOrder,
+     ?   startMonth?: SortOrder,
+     ?   endMonth?: SortOrder,
+     ?   createdAt?: SortOrder,
+     ?   updatedAt?: SortOrder,
+     ?   students?: StudentOrderByRelationAggregateInput
+       }
+     })
+
+Unknown argument `asc`. Did you mean `id`? Available options are listed in green.
