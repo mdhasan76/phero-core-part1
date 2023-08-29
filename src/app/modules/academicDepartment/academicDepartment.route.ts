@@ -7,12 +7,10 @@ const router = express.Router();
 router
   .post(
     '/create-academic-department',
-    validateRequest(
-      AcademicDepartmentValidation.academicDepartmentValidationSchema
-    ),
+    validateRequest(AcademicDepartmentValidation.create),
     AcademicDepartmentController.insertToDB
   )
   .get('/', AcademicDepartmentController.getAllFromDB)
   .get('/:id', AcademicDepartmentController.getDataById);
 
-export const DepartmentDepartmentRoute = router;
+export const AcademicDepartmentRoute = router;
