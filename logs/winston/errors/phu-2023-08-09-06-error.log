@@ -1,0 +1,10 @@
+Fri Sep 08 2023 6:59:5 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.building.create()` invocation:
+
+
+Operation 'createOne' for model 'Building' does not match any query.
+Fri Sep 08 2023 6:59:18 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.building.create()` invocation:
+
+
+Operation 'createOne' for model 'Building' does not match any query.
