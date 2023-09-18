@@ -128,6 +128,8 @@ model Course{
   credits Int @default(0)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  prerequisite CourseToPrerequisite[] @relation("CourseToPrerequisit")
+  prerequisiteFor CourseToPrerequisite[] @relation("PrerequisiteToCourse")
 
   @@map("courses")
 }
@@ -136,7 +138,8 @@ model CourseToPrerequisite{
   courseId String
   prerequisiteId String
   
-  course Course @relation(fields: [courseId], references: [id])
+  course Course @relation(fields: [courseId], references: [id], name: "CourseToPrerequisit")
+  preRequisit Course @relation(fields: [prerequisiteId], references: [id], name: "PrerequisiteToCourse")
 
   @@id([courseId, prerequisiteId])
 }

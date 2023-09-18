@@ -1,0 +1,11 @@
+Mon Sep 18 2023 19:51:13 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.create()` invocation:
+
+{
+  data: {
+    title: "Building 1",
++   code: String
+  }
+}
+
+Argument `code` is missing.
