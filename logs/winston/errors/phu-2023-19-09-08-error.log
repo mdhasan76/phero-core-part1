@@ -1,0 +1,20 @@
+Tue Sep 19 2023 8:52:43 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.findUnique()` invocation:
+
+
+Unknown nested field '0' for operation prerequisite does not match any query.
+Tue Sep 19 2023 8:53:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.findUnique()` invocation:
+
+
+Unknown nested field '0' for operation prerequisite does not match any query.
+Tue Sep 19 2023 8:54:47 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.findUnique()` invocation:
+
+
+Unknown nested field '0' for operation prerequisite does not match any query.
+Tue Sep 19 2023 8:59:25 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.course.findUnique()` invocation:
+
+
+Unknown nested field '0' for operation prerequisite does not match any query.
