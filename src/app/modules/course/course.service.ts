@@ -50,4 +50,8 @@ const insertToDB = async (data: any): Promise<any> => {
   // return newCourse;
 };
 
-export const CourseService = { insertToDB };
+const getAll = async () => {
+  const result = await prisma.course.findMany();
+  return result;
+};
+export const CourseService = { insertToDB, getAll };
