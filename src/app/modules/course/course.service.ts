@@ -1,6 +1,8 @@
+import { Course } from '@prisma/client';
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import prisma from '../../../shared/prisma';
+import { ICoursesData } from './course.interface';
 
 // insert new data
 const insertToDB = async (data: any): Promise<any> => {
@@ -24,7 +26,7 @@ const insertToDB = async (data: any): Promise<any> => {
     }
     return result;
   });
-  console.log(newCourse, 'hey');
+  // console.log(newCourse, 'hey');
   if (newCourse) {
     const responseData = await prisma.course.findUnique({
       where: {
@@ -54,4 +56,67 @@ const getAll = async () => {
   const result = await prisma.course.findMany();
   return result;
 };
-export const CourseService = { insertToDB, getAll };
+
+const updateOneInDB = async (
+  id: string,
+  payload: ICoursesData
+): Promise<Course | null> => {
+  const { preRequisiteCourses, ...courseData } = payload;
+
+  await prisma.$transaction(async transactionClient => {
+    const result = await transactionClient.course.update({
+      where: {
+        id: id,
+      },
+      data: courseData,
+    });
+    if (!result) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to update course');
+    }
+
+    if (preRequisiteCourses && preRequisiteCourses.length > 0) {
+      const deletePrerequisite = preRequisiteCourses.filter(
+        el => el.courseId && el.isDeleted
+      );
+
+      const newPrerequisite = preRequisiteCourses.filter(
+        el => el.courseId && !el.isDeleted
+      );
+      // console.log(deletePrerequisite);
+
+      for (let i = 0; i < deletePrerequisite.length; i++) {
+        await transactionClient.courseToPrerequisite.deleteMany({
+          where: {
+            AND: [
+              {
+                courseId: id,
+              },
+              {
+                prerequisiteId: deletePrerequisite[i].courseId,
+              },
+            ],
+          },
+        });
+      }
+
+      for (let index = 0; index < newPrerequisite.length; index++) {
+        await transactionClient.courseToPrerequisite.create({
+          data: {
+            courseId: id,
+            prerequisiteId: newPrerequisite[index].courseId,
+          },
+        });
+      }
+    }
+  });
+
+  const result = await prisma.course.update({
+    where: {
+      id: id,
+    },
+    data: courseData,
+  });
+  return result;
+};
+
+export const CourseService = { insertToDB, getAll, updateOneInDB };

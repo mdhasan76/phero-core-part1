@@ -13,7 +13,6 @@ const insertToDB = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
-
 const getAll = catchAsync(async (req: Request, res: Response) => {
   const result = await CourseService.getAll();
   sendResponse(res, {
@@ -24,4 +23,15 @@ const getAll = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const CourseController = { insertToDB, getAll };
+const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
+  const data = req.body;
+  const result = await CourseService.updateOneInDB(req.params.id, data);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Course updated successfully',
+    data: result,
+  });
+});
+
+export const CourseController = { insertToDB, getAll, updateOneInDB };
