@@ -1,0 +1,227 @@
+Sun Oct 08 2023 9:7:8 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "academicDepartmentId"
+    ],
+    "message": "Academic department is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "academicFacultyId"
+    ],
+    "message": "Academic faculty is required"
+  }
+]
+Sun Oct 08 2023 9:9:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicDepartment.create()` invocation:
+
+
+Foreign key constraint failed on the field: `academic_departments_academicFacultyId_fkey (index)`
+Sun Oct 08 2023 9:10:1 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicFaculty.create()` invocation:
+
+{
+  data: {
+    year: 2027,
+    ~~~~
+    title: "Rainy",
+    code: "02",
+    startMonth: "January",
+    endMonth: "Februery",
+?   id?: String,
+?   createdAt?: DateTime,
+?   updatedAt?: DateTime,
+?   academicDepartments?: AcademicDepartmentCreateNestedManyWithoutAcademicFacultyInput,
+?   students?: StudentCreateNestedManyWithoutAcademicFacultyInput,
+?   faculties?: FacultyCreateNestedManyWithoutAcademicFacultyInput
+  }
+}
+
+Unknown argument `year`. Available options are listed in green.
+Sun Oct 08 2023 9:22:56 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "facultyId"
+    ],
+    "message": "Faculty id is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "firstName"
+    ],
+    "message": "First name is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "lastName"
+    ],
+    "message": "Last name is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "middleName"
+    ],
+    "message": "Middle name is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "profileImage"
+    ],
+    "message": "Profile image is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "email"
+    ],
+    "message": "Email is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "contactNo"
+    ],
+    "message": "Contact no is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "gender"
+    ],
+    "message": "Gender is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "bloodGroup"
+    ],
+    "message": "Blood group is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "designation"
+    ],
+    "message": "Designation is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "academicDepartmentId"
+    ],
+    "message": "Academic department is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "academicFacultyId"
+    ],
+    "message": "Academic faculty is required"
+  }
+]
+Sun Oct 08 2023 9:23:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.faculty.create()` invocation:
+
+
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`
+Sun Oct 08 2023 9:25:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.faculty.create()` invocation:
+
+
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`
+Sun Oct 08 2023 9:25:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "academicDepartmentId"
+    ],
+    "message": "Academic department is required"
+  },
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "academicFacultyId"
+    ],
+    "message": "Academic faculty is required"
+  }
+]
+Sun Oct 08 2023 9:25:51 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.faculty.create()` invocation:
+
+
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`
+Sun Oct 08 2023 9:26:34 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.faculty.create()` invocation:
+
+
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`
+Sun Oct 08 2023 9:28:9 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.faculty.create()` invocation:
+
+
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`
+Sun Oct 08 2023 9:29:26 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.faculty.create()` invocation:
+
+
+Foreign key constraint failed on the field: `faculties_academicDepartmentId_fkey (index)`
+Sun Oct 08 2023 9:31:35 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.academicDepartment.create()` invocation:
+
+
+Foreign key constraint failed on the field: `academic_departments_academicFacultyId_fkey (index)`

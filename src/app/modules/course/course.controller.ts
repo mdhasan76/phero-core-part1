@@ -34,4 +34,31 @@ const updateOneInDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const CourseController = { insertToDB, getAll, updateOneInDB };
+const assignFaculties = catchAsync(async (req: Request, res: Response) => {
+  const data = req.body.faculties;
+  const result = await CourseService.assignFaculties(req.params.id, data);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Assign faculty in course successfully',
+    data: result,
+  });
+});
+const removeFaculties = catchAsync(async (req: Request, res: Response) => {
+  const data = req.body.faculties;
+  const result = await CourseService.removeFaculties(req.params.id, data);
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'delete course from course faculty successfully',
+    data: result,
+  });
+});
+
+export const CourseController = {
+  insertToDB,
+  getAll,
+  updateOneInDB,
+  assignFaculties,
+  removeFaculties,
+};
