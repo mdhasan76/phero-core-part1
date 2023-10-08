@@ -143,3 +143,8 @@ model CourseToPrerequisite{
 
   @@id([courseId, prerequisiteId])
 }
+
+// model CourseFaculty{
+//   courseId String
+//   course Course
+// }

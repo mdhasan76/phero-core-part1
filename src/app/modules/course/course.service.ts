@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Course } from '@prisma/client';
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import prisma from '../../../shared/prisma';
+import { asyncForEach } from '../../../shared/utils';
 import { ICoursesData } from './course.interface';
 
 // insert new data
@@ -13,16 +15,29 @@ const insertToDB = async (data: any): Promise<any> => {
     const result = await clientTransaction.course.create({ data: coursesData });
 
     if (preRequisiteCourses && preRequisiteCourses.length > 0) {
-      for (let index = 0; index < preRequisiteCourses.length; index++) {
-        const createPrerequisite =
-          await clientTransaction.courseToPrerequisite.create({
-            data: {
-              courseId: result.id,
-              prerequisiteId: preRequisiteCourses[index].courseId,
-            },
-          });
-        console.log(createPrerequisite);
-      }
+      await asyncForEach(
+        preRequisiteCourses,
+        async (preRequisiteCourse: any) => {
+          const createPrerequisite =
+            await clientTransaction.courseToPrerequisite.create({
+              data: {
+                courseId: result.id,
+                prerequisiteId: preRequisiteCourse.courseId,
+              },
+            });
+          return createPrerequisite;
+        }
+      );
+      // for (let index = 0; index < preRequisiteCourses.length; index++) {
+      //   const createPrerequisite =
+      //     await clientTransaction.courseToPrerequisite.create({
+      //       data: {
+      //         courseId: result.id,
+      //         prerequisiteId: preRequisiteCourses[index].courseId,
+      //       },
+      //     });
+      //   console.log(createPrerequisite);
+      // }
     }
     return result;
   });
@@ -110,13 +125,24 @@ const updateOneInDB = async (
     }
   });
 
-  const result = await prisma.course.update({
+  const responseData = await prisma.course.findUnique({
     where: {
       id: id,
     },
-    data: courseData,
+    include: {
+      prerequisite: {
+        include: {
+          preRequisit: true,
+        },
+      },
+      prerequisiteFor: {
+        include: {
+          course: true,
+        },
+      },
+    },
   });
-  return result;
+  return responseData;
 };
 
 export const CourseService = { insertToDB, getAll, updateOneInDB };
