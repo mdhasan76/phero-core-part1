@@ -29,6 +29,21 @@
             "date": 1708567564688,
             "name": "D:\\Next-Level-webDev\\SQL\\university-management-core-service-starter\\logs\\winston\\errors\\phu-2024-22-02-08-error.log",
             "hash": "5d1489d739ff374551b27fc0a3078c8d7d84fbb346ca8fba466ae6575142d6d2"
+        },
+        {
+            "date": 1709254043358,
+            "name": "D:\\Next-Level-webDev\\SQL\\university-management-core-service-starter\\logs\\winston\\errors\\phu-2024-01-03-06-error.log",
+            "hash": "3f9ba84428f40989859a50f60b8b47a53db126bfde7f83c56a24b2f1dab0e88a"
+        },
+        {
+            "date": 1709258874259,
+            "name": "D:\\Next-Level-webDev\\SQL\\university-management-core-service-starter\\logs\\winston\\errors\\phu-2024-01-03-08-error.log",
+            "hash": "3e9fcc1788a51f6e364099c89f680f2b04e638a422589b98aaf91eaf0cc2b1b5"
+        },
+        {
+            "date": 1709262395833,
+            "name": "D:\\Next-Level-webDev\\SQL\\university-management-core-service-starter\\logs\\winston\\errors\\phu-2024-01-03-09-error.log",
+            "hash": "af89657bf88bb9bfa48d26eddb6255c369c3a530700793823eeb2ffd3d24f3aa"
         }
     ],
     "hashType": "sha256"
