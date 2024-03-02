@@ -30,7 +30,7 @@ const getDataById = catchAsync(async (req: Request, res: Response) => {
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
   const options = pick(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
   const filters = pick(req.query, ['searchTerm', 'title']);
-  console.log(req.query);
+  // console.log(req.query);
   const result = await AcademicDepartmentService.getAllFromDB(filters, options);
   sendResponse<AcademicDepartment[]>(res, {
     statusCode: 200,

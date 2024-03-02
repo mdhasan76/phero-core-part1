@@ -5,6 +5,10 @@ import { AcademicSemesterRoute } from '../modules/academicSemester/academicSemes
 import { BuildingRouter } from '../modules/building/building.route';
 import { CourseRouter } from '../modules/course/course.route';
 import { facultyRoutes } from '../modules/faculty/faculty.route';
+import { OfferedCourseRoute } from '../modules/offeredCourse/offeredCourse.route';
+import { OfferedCourseClassScheduleRoute } from '../modules/offeredCourseClassSchedule/offeredCourseClassSchedule.route';
+import { OfferedCourseSessionRoute } from '../modules/offeredCourseSection/offeredCourseSection.route';
+import { RoomRoute } from '../modules/room/room.route';
 import { SemesterRegistrationRoute } from '../modules/semesterRegistration/semesterRegistration.route';
 import { studentRoutes } from '../modules/student/student.route';
 
@@ -41,8 +45,24 @@ const moduleRoutes = [
     routes: facultyRoutes,
   },
   {
+    path: '/rooms',
+    routes: RoomRoute,
+  },
+  {
     path: '/semester-registrations',
     routes: SemesterRegistrationRoute,
+  },
+  {
+    path: '/offered-courses',
+    routes: OfferedCourseRoute,
+  },
+  {
+    path: '/offered-course-sessions',
+    routes: OfferedCourseSessionRoute,
+  },
+  {
+    path: '/offered-course-class-schedules',
+    routes: OfferedCourseClassScheduleRoute,
   },
 ];
 

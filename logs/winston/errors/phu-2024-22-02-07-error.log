@@ -1,0 +1,63 @@
+Thu Feb 22 2024 7:10:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Expected double-quoted property name in JSON at position 242
+Thu Feb 22 2024 7:37:43 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourse.create()` invocation:
+
+{
+  data: {
+    academicDepartmentId: "03463aeb-c5f5-4463-a623-0f6e59aa069a",
+    semesterRegistrationId: undefined,
+    courseId: "3997997a-67b8-455a-856f-31910e3a94a6",
++   createdAt: DateTime
+  }
+}
+
+Argument `createdAt` is missing.
+Thu Feb 22 2024 7:38:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourse.create()` invocation:
+
+{
+  data: {
+    academicDepartmentId: "03463aeb-c5f5-4463-a623-0f6e59aa069a",
+    semesterRegistrationId: undefined,
+    courseId: "3997997a-67b8-455a-856f-31910e3a94a6",
++   createdAt: DateTime
+  }
+}
+
+Argument `createdAt` is missing.
+Thu Feb 22 2024 7:40:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourse.create()` invocation:
+
+{
+  data: {
+    academicDepartmentId: "03463aeb-c5f5-4463-a623-0f6e59aa069a",
+    semesterRegistrationId: "3997997a-67b8-455a-856f-31910e3a94a6",
+    courseId: "3997997a-67b8-455a-856f-31910e3a94a6",
++   createdAt: DateTime
+  }
+}
+
+Argument `createdAt` is missing.
+Thu Feb 22 2024 7:43:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourse.create()` invocation:
+
+{
+  data: {
+    academicDepartmentId: "03463aeb-c5f5-4463-a623-0f6e59aa069a",
+    semesterRegistrationId: "3997997a-67b8-455a-856f-31910e3a94a6",
+    courseId: "3997997a-67b8-455a-856f-31910e3a94a6",
++   createdAt: DateTime
+  }
+}
+
+Argument `createdAt` is missing.
+Thu Feb 22 2024 7:44:15 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourse.create()` invocation:
+
+
+Foreign key constraint failed on the field: `offered_courses_academicDepartmentId_fkey (index)`
+Thu Feb 22 2024 7:45:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourse.create()` invocation:
+
+
+Foreign key constraint failed on the field: `offered_courses_semesterRegistrationId_fkey (index)`

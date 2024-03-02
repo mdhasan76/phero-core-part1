@@ -13,4 +13,14 @@ const insertToDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const SemesterRegistrationController = { insertToDB };
+const getAll = catchAsync(async (req: Request, res: Response) => {
+  const result = await SemesterRegistrationService.getAll();
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Semester Registration retrieved successfully',
+    data: result,
+  });
+});
+
+export const SemesterRegistrationController = { insertToDB, getAll };

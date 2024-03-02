@@ -1,0 +1,258 @@
+Fri Mar 01 2024 8:7:57 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Expected array
+Fri Mar 01 2024 8:14:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Expected array
+Fri Mar 01 2024 8:15:46 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+{
+  data: {
+    title: "Hello Course Sessions",
+    maxCapacity: 20,
+    offeredCourseId: "baf411ab-7c6b-4105-b4fd-76fb2f840dff",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
++   currentlyEnrolledStudents: Int
+  },
+  include: {
+    semesterRegistration: true,
+    offeredCourse: true
+  }
+}
+
+Argument `currentlyEnrolledStudents` is missing.
+Fri Mar 01 2024 8:16:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+{
+  data: {
+    title: "Hello Course Sessions",
+    maxCapacity: 20,
+    offeredCourseId: "baf411ab-7c6b-4105-b4fd-76fb2f840dff",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
++   currentlyEnrolledStudents: Int
+  },
+  include: {
+    semesterRegistration: true,
+    offeredCourse: true
+  }
+}
+
+Argument `currentlyEnrolledStudents` is missing.
+Fri Mar 01 2024 8:16:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+{
+  data: {
+    title: "Hello Course Sessions",
+    maxCapacity: 20,
+    offeredCourseId: "baf411ab-7c6b-4105-b4fd-76fb2f840dff",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
++   currentlyEnrolledStudents: Int
+  },
+  include: {
+    semesterRegistration: true,
+    offeredCourse: true
+  }
+}
+
+Argument `currentlyEnrolledStudents` is missing.
+Fri Mar 01 2024 8:17:10 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+
+Foreign key constraint failed on the field: `offered_course_section_offeredCourseId_fkey (index)`
+Fri Mar 01 2024 8:17:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Offered course does not exist
+Fri Mar 01 2024 8:36:14 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    roomNumber: "420",
+    floor: "Hello ",
+    bulding: "b7efd3c6-ab20-4dab-bc6c-35db761cec5c",
++   building: {
++     create: BuildingCreateWithoutRoomsInput | BuildingUncheckedCreateWithoutRoomsInput,
++     connectOrCreate: BuildingCreateOrConnectWithoutRoomsInput,
++     connect: BuildingWhereUniqueInput
++   }
+  }
+}
+
+Argument `building` is missing.
+Fri Mar 01 2024 8:36:32 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    roomNumber: "420",
+    floor: "Hello ",
+    building: "b7efd3c6-ab20-4dab-bc6c-35db761cec5c"
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  }
+}
+
+Argument `building`: Invalid value provided. Expected BuildingCreateNestedOneWithoutRoomsInput, provided String.
+Fri Mar 01 2024 8:36:54 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    roomNumber: "420",
+    floor: "Hello ",
+    building: [
+      "b7efd3c6-ab20-4dab-bc6c-35db761cec5c"
+    ]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  }
+}
+
+Argument `building`: Invalid value provided. Expected BuildingCreateNestedOneWithoutRoomsInput, provided (String).
+Fri Mar 01 2024 8:37:15 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.room.create()` invocation:
+
+{
+  data: {
+    roomNumber: "420",
+    floor: "Hello ",
+    buildingId: [
+      "b7efd3c6-ab20-4dab-bc6c-35db761cec5c"
+    ]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  }
+}
+
+Argument `buildingId`: Invalid value provided. Expected String, provided (String).
+Fri Mar 01 2024 8:38:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSessionId: "3435df99-937c-43dc-b212-ff06269873dc",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    roomId: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    facultyId: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc",
++   title: String
+  },
+  include: {
+    semesterRegistration: true,
+    offeredCourse: true
+  }
+}
+
+Argument `title` is missing.
+Fri Mar 01 2024 8:39:15 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseSection.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSessionId: "3435df99-937c-43dc-b212-ff06269873dc",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    roomId: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    facultyId: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc",
++   title: String
+  },
+  include: {
+    semesterRegistration: true,
+    offeredCourse: true
+  }
+}
+
+Argument `title` is missing.
+Fri Mar 01 2024 8:40:33 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSessionId: "3435df99-937c-43dc-b212-ff06269873dc",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    roomId: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    facultyId: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc",
++   offeredCourseSection: {
++     create: OfferedCourseSectionCreateWithoutOfferedCourseClassScheduleInput | OfferedCourseSectionUncheckedCreateWithoutOfferedCourseClassScheduleInput,
++     connectOrCreate: OfferedCourseSectionCreateOrConnectWithoutOfferedCourseClassScheduleInput,
++     connect: OfferedCourseSectionWhereUniqueInput
++   }
+  }
+}
+
+Argument `offeredCourseSection` is missing.
+Fri Mar 01 2024 8:40:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSection: "3435df99-937c-43dc-b212-ff06269873dc",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    roomId: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    facultyId: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc",
++   semesterRegistration: {
++     create: SemesterRegistrationCreateWithoutOfferedCourseClassSchedulesInput | SemesterRegistrationUncheckedCreateWithoutOfferedCourseClassSchedulesInput,
++     connectOrCreate: SemesterRegistrationCreateOrConnectWithoutOfferedCourseClassSchedulesInput,
++     connect: SemesterRegistrationWhereUniqueInput
++   }
+  }
+}
+
+Argument `semesterRegistration` is missing.
+Fri Mar 01 2024 8:41:47 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSection: "3435df99-937c-43dc-b212-ff06269873dc",
+    semesterRegistrationId: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    roomId: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    facultyId: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc",
++   semesterRegistration: {
++     create: SemesterRegistrationCreateWithoutOfferedCourseClassSchedulesInput | SemesterRegistrationUncheckedCreateWithoutOfferedCourseClassSchedulesInput,
++     connectOrCreate: SemesterRegistrationCreateOrConnectWithoutOfferedCourseClassSchedulesInput,
++     connect: SemesterRegistrationWhereUniqueInput
++   }
+  }
+}
+
+Argument `semesterRegistration` is missing.
+Fri Mar 01 2024 8:42:3 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSection: "3435df99-937c-43dc-b212-ff06269873dc",
+    semesterRegistration: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    roomId: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    facultyId: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc",
++   room: {
++     create: RoomCreateWithoutOfferedCourseClassSchedulesInput | RoomUncheckedCreateWithoutOfferedCourseClassSchedulesInput,
++     connectOrCreate: RoomCreateOrConnectWithoutOfferedCourseClassSchedulesInput,
++     connect: RoomWhereUniqueInput
++   }
+  }
+}
+
+Argument `room` is missing.
+Fri Mar 01 2024 8:42:18 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.create()` invocation:
+
+{
+  data: {
+    startTime: "12 PM",
+    endTime: "2 PM",
+    offeredCourseSection: "3435df99-937c-43dc-b212-ff06269873dc",
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    semesterRegistration: "d69d7b86-7e3d-4f8f-9fe4-a35783b8baa1",
+    room: "f974861b-cd1f-46a4-a34f-54f38cea50d7",
+    faculty: "28e8e4d2-7e92-49c1-b815-e29f72cc1ebc"
+  }
+}
+
+Argument `offeredCourseSection`: Invalid value provided. Expected OfferedCourseSectionCreateNestedOneWithoutOfferedCourseClassScheduleInput, provided String.
