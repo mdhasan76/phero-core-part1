@@ -1,0 +1,38 @@
+Sat Mar 02 2024 7:3:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room already booked!
+Sat Mar 02 2024 7:4:31 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room already booked!
+Sat Mar 02 2024 7:5:23 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room already booked!
+Sat Mar 02 2024 7:12:43 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room already booked!
+Sat Mar 02 2024 7:12:44 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ Room already booked!
+Sat Mar 02 2024 7:57:52 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.offeredCourseClassSchedule.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            faculty: {
+              id: {
+                facultyId: "FAC004"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    faculty: true,
+    offeredCourseSection: true,
+    room: true,
+    semesterRegistration: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `facultyId`. Available options are listed in green.
