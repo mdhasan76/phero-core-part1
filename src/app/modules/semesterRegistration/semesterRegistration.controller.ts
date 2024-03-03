@@ -23,4 +23,20 @@ const getAll = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-export const SemesterRegistrationController = { insertToDB, getAll };
+const startMyRegistration = catchAsync(async (req: Request, res: Response) => {
+  const result = await SemesterRegistrationService.startMyRegistration(
+    req.user?.userId
+  );
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Registration successfully',
+    data: result,
+  });
+});
+
+export const SemesterRegistrationController = {
+  insertToDB,
+  getAll,
+  startMyRegistration,
+};

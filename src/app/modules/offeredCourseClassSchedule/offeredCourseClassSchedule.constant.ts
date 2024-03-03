@@ -13,3 +13,12 @@ export const OfferedCourseClassScheduleRelationalFieldsMapper: {
   roomId: 'room',
   facultyId: 'faculty',
 };
+
+export const OfferedCourseClassScheduleFilterableFields = [
+  'searchTerm',
+  'dayOfWeek',
+  'offeredCourseSectionId',
+  'semesterRegistrationId',
+  'roomId',
+  'facultyId',
+];
