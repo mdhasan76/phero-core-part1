@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import catchAsync from '../../../shared/catchAsync';
 import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
-import { OfferedCourseClassScheduleRelationalFields } from './offeredCourseClassSchedule.constant';
+import { OfferedCourseClassScheduleFilterableFields } from './offeredCourseClassSchedule.constant';
 import { OfferedCourseClassScheduleService } from './offeredCourseClassSchedule.service';
 
 const insertToDB = catchAsync(async (req: Request, res: Response) => {
@@ -18,7 +18,7 @@ const insertToDB = catchAsync(async (req: Request, res: Response) => {
 
 const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
   const options = pick(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
-  const filters = pick(req.query, OfferedCourseClassScheduleRelationalFields);
+  const filters = pick(req.query, OfferedCourseClassScheduleFilterableFields);
 
   const result = await OfferedCourseClassScheduleService.getAllFromDB(
     filters,

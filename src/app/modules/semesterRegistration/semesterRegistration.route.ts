@@ -1,7 +1,14 @@
 import express from 'express';
+import { ENUM_USER_ROLE } from '../../../enums/user';
+import auth from '../../middlewares/auth';
 import { SemesterRegistrationController } from './semesterRegistration.controller';
 const route = express.Router();
 
+route.post(
+  '/start-registration',
+  auth(ENUM_USER_ROLE.STUDENT),
+  SemesterRegistrationController.startMyRegistration
+);
 route
   .post(
     '/create-semester-registration',

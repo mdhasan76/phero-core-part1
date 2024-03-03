@@ -1,0 +1,12 @@
+Sun Mar 03 2024 6:52:50 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ jwt expired
+Sun Mar 03 2024 6:56:4 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ invalid signature
+Sun Mar 03 2024 6:56:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.student.create()` invocation:
+
+
+Foreign key constraint failed on the field: `students_academicSemesterId_fkey (index)`
+Sun Mar 03 2024 6:57:48 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.student.create()` invocation:
+
+
+Foreign key constraint failed on the field: `students_academicDepartmentId_fkey (index)`
