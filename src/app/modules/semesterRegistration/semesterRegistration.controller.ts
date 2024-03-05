@@ -35,8 +35,35 @@ const startMyRegistration = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const enrollIntoCourse = catchAsync(async (req: Request, res: Response) => {
+  const result = await SemesterRegistrationService.enrollIntoCourse(
+    req.user?.userId,
+    req.body
+  );
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'Enrolled into course successfully',
+    data: result,
+  });
+});
+const withdrawFromCourse = catchAsync(async (req: Request, res: Response) => {
+  const result = await SemesterRegistrationService.withdrawFromCourse(
+    req.user?.userId,
+    req.body
+  );
+  sendResponse(res, {
+    statusCode: 200,
+    success: true,
+    message: 'withdraw from course successfully',
+    data: result,
+  });
+});
+
 export const SemesterRegistrationController = {
   insertToDB,
   getAll,
   startMyRegistration,
+  enrollIntoCourse,
+  withdrawFromCourse,
 };

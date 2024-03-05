@@ -9,6 +9,16 @@ route.post(
   auth(ENUM_USER_ROLE.STUDENT),
   SemesterRegistrationController.startMyRegistration
 );
+route.post(
+  '/enroll',
+  auth(ENUM_USER_ROLE.STUDENT),
+  SemesterRegistrationController.enrollIntoCourse
+);
+route.post(
+  '/withdraw',
+  auth(ENUM_USER_ROLE.STUDENT),
+  SemesterRegistrationController.withdrawFromCourse
+);
 route
   .post(
     '/create-semester-registration',

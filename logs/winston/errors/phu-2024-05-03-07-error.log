@@ -1,0 +1,10 @@
+Tue Mar 05 2024 7:24:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentSemesterRegistrationCourse.create()` invocation:
+
+
+Unique constraint failed on the fields: (`semesterRegistrationId`,`studentId`,`offeredCourseId`)
+Tue Mar 05 2024 7:24:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.studentSemesterRegistrationCourse.create()` invocation:
+
+
+Unique constraint failed on the fields: (`semesterRegistrationId`,`studentId`,`offeredCourseId`)
